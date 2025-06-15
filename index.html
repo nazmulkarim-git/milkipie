@@ -1,65 +1,120 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Milkipie – Fresh Milk Delivered Daily</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Milkipie - Fresh Milk Delivery</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #e0f7ff; /* light sky blue background */
+    margin: 0;
+    padding: 0;
+    color: #025a9a; /* deep sky blue text */
+  }
+  header {
+    background-color: #87ceeb; /* sky blue header */
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+  }
+  main {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  main p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  main ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  main ul li {
+    background-color: #b3ddff; /* lighter sky blue */
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  footer {
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9rem;
+    color: #555;
+    background: #d6f0ff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  /* WhatsApp Button */
+  .whatsapp-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366; /* WhatsApp green */
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  .whatsapp-button:hover {
+    background-color: #1ebe57;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1 class="logo">Milkipie</h1>
-      <nav>
-        <a href="#features">Why Milkipie</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Fresh, Pure, Daily Milk Delivery</h2>
-      <p>Milkipie brings farm-fresh milk straight to your doorstep every morning. No chemicals. No delays. Just pure goodness.</p>
-      <a href="#contact" class="btn">Get Started</a>
-    </div>
-  </section>
+<header>
+  <h1>Milkipie</h1>
+  <p>Fresh Milk Delivery to Your Doorstep</p>
+</header>
 
-  <section id="features" class="features">
-    <div class="container">
-      <h3>Why Choose Milkipie?</h3>
-      <div class="cards">
-        <div class="card">
-          <h4>100% Pure</h4>
-          <p>Fresh from local farms, no preservatives or additives.</p>
-        </div>
-        <div class="card">
-          <h4>Daily Delivery</h4>
-          <p>Wake up to fresh milk at your doorstep every day.</p>
-        </div>
-        <div class="card">
-          <h4>Eco-Friendly</h4>
-          <p>We use glass bottles and minimal packaging to save the planet.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<main>
+  <p>Welcome to Milkipie! We deliver fresh, pure milk right to your home daily. Enjoy the convenience of high-quality dairy products with just one click.</p>
+  <ul>
+    <li>100% Pure Fresh Milk</li>
+    <li>Reliable Daily Delivery</li>
+    <li>Affordable Prices</li>
+    <li>Order Anytime, Anywhere</li>
+  </ul>
+  <p>Order now and taste the difference!</p>
+</main>
 
-  <section id="contact" class="contact">
-    <div class="container">
-      <h3>Get in Touch</h3>
-      <p>Ready to get fresh milk delivered? Call us or send a message via WhatsApp.</p>
-      <a href="https://wa.me/8801XXXXXXXXX?text=Hi%20Milkipie!%20I%20want%20to%20order%20fresh%20milk." class="btn" target="_blank">
-        🛒 Order Now on WhatsApp
-      </a>
-    </div>
-  </section>
+<footer>
+  &copy; 2025 Milkipie. All rights reserved.
+</footer>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Milkipie. All rights reserved.</p>
-    </div>
-  </footer>
+<!-- WhatsApp Order Button -->
+<a
+  href="https://wa.me/8801775519600?text=Hello%20Milkipie!%20I%20would%20like%20to%20place%20an%20order."
+  class="whatsapp-button"
+  target="_blank"
+  aria-label="Order via WhatsApp"
+  rel="noopener noreferrer"
+>
+  &#x1F4AC;
+</a>
+
 </body>
 </html>
