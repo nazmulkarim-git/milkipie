@@ -1,120 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Milkipie - Fresh Milk Delivery</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #e0f7ff; /* light sky blue background */
-    margin: 0;
-    padding: 0;
-    color: #025a9a; /* deep sky blue text */
-  }
-  header {
-    background-color: #87ceeb; /* sky blue header */
-    padding: 30px 20px;
-    text-align: center;
-    color: white;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.8rem;
-    letter-spacing: 1px;
-  }
-  main {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 0 20px;
-    text-align: center;
-  }
-  main p {
-    font-size: 1.3rem;
-    line-height: 1.5;
-    margin-bottom: 30px;
-  }
-  main ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 40px;
-  }
-  main ul li {
-    background-color: #b3ddff; /* lighter sky blue */
-    margin: 10px 0;
-    padding: 15px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-  }
-  footer {
-    text-align: center;
-    padding: 15px 20px;
-    font-size: 0.9rem;
-    color: #555;
-    background: #d6f0ff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Milkipie – Fresh Milk Delivered</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #f0f8ff; color: #333; }
+    header { background: white; box-shadow: 0 2px 6px rgba(0,0,0,0.1); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    header h1 { color: #007acc; }
+    nav a { margin-left: 1rem; text-decoration: none; color: #007acc; font-weight: 600; }
+    .hero { background: url('https://images.unsplash.com/photo-1580461701434-9386f33b5f64?fit=crop&w=1200&q=80') no-repeat center center/cover; height: 90vh; display: flex; align-items: center; justify-content: center; color: white; text-shadow: 2px 2px 8px #000; flex-direction: column; text-align: center; padding: 1rem; }
+    .hero h2 { font-size: 2.8rem; }
+    .hero p { font-size: 1.2rem; margin-top: 1rem; }
+    .section { padding: 4rem 2rem; max-width: 1200px; margin: auto; }
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+    .product, .testimonial { background: white; border-radius: 10px; padding: 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center; }
+    .product img { max-width: 100%; border-radius: 10px; height: 180px; object-fit: cover; margin-bottom: 1rem; }
+    .product h3 { margin-bottom: 0.5rem; color: #007acc; }
+    .cta { text-align: center; padding: 3rem 1rem; background: #e0f7ff; }
+    .cta h2 { color: #025a9a; }
+    .cta a { display: inline-block; margin-top: 1rem; padding: 0.8rem 1.5rem; background: #25d366; color: white; border-radius: 8px; text-decoration: none; font-size: 1rem; }
+    footer { background: #007acc; color: white; text-align: center; padding: 1rem; font-size: 0.9rem; margin-top: 2rem; }
+    .whatsapp-button { position: fixed; bottom: 20px; right: 20px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 30px; text-decoration: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); z-index: 999; }
+    @media (max-width: 768px) { .hero h2 { font-size: 2rem; } nav a { margin-left: 0.5rem; font-size: 0.9rem; } }
+    body::before {
+  content: "";
+  background: url('https://www.buffalomarket.com/hs-fs/hubfs/How%20to%20Find%20the%20Best%20Wholesale%20Milk%20Distributor%20for%20your%20Dairy%20Business.jpg?width=2442&name=How%20to%20Find%20the%20Best%20Wholesale%20Milk%20Distributor%20for%20your%20Dairy%20Business.jpg') no-repeat center center/cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(10px);
+  z-index: -1;
+  opacity: 0.3;
+}
 
-  /* WhatsApp Button */
-  .whatsapp-button {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: #25d366; /* WhatsApp green */
-    color: white;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-  }
-  .whatsapp-button:hover {
-    background-color: #1ebe57;
-  }
-</style>
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Milkipie</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Milkipie</h1>
-  <p>Fresh Milk Delivery to Your Doorstep</p>
-</header>
+  <section class="hero">
+    <h2>Pure Milk. Straight From the Farm.</h2>
+    <p>Daily fresh milk delivery at your doorstep</p>
+  </section>
 
-<main>
-  <p>Welcome to Milkipie! We deliver fresh, pure milk right to your home daily. Enjoy the convenience of high-quality dairy products with just one click.</p>
-  <ul>
-    <li>100% Pure Fresh Milk</li>
-    <li>Reliable Daily Delivery</li>
-    <li>Affordable Prices</li>
-    <li>Order Anytime, Anywhere</li>
-  </ul>
-  <p>Order now and taste the difference!</p>
-</main>
+  <section id="about" class="section">
+    <h2 style="text-align:center; margin-bottom:2rem; color:#007acc;">About Milkipie</h2>
+    <p style="text-align:center; font-size:1.1rem;">Premium, farm-fresh milk delivered to your doorstep in eco-friendly glass bottles. Pure. Fresh. Sustainable. 🥛✨
+Based in Dhaka | Taste the difference with Milkipie</p>
+  </section>
 
-<footer>
-  &copy; 2025 Milkipie. All rights reserved.
-</footer>
+  <section id="products" class="section products">
+    <div class="product">
+      <img src="https://www.millsmilkscotland.co.uk/order/wp-content/uploads/2024/01/Glass_1_litre_bottle_Mossgiel_organic_semi-skimmed_milk-1.jpg" alt="Fresh Milk Bottle">
+      <h3>1L Milk Bottle</h3>
+      <p>Pure cow milk – no additives. Delivered chilled every morning.</p>
+    </div>
+    <div class="product">
+      <img src="https://www.grahamtyson.com/image/cache/catalog/Products/Glass/Milk/500ml%20Glass.2-900x600.png" alt="Milk Pouch">
+      <h3>500ml Milk Bottle</h3>
+      <p>Affordable and fresh – ideal for small families and daily tea.</p>
+    </div>
+    <div class="product">
+      <img src="https://franchiseindia.s3.ap-south-1.amazonaws.com/uploads/content/fi/art/5d418b86c0c9d.jpeg" alt="Dairy Product">
+      <h3>Bulk Milk Sales</h3>
+      <p>Make us your Milk supplier for your business</p>
+    </div>
+  </section>
 
-<!-- WhatsApp Order Button -->
-<a
-  href="https://wa.me/8801775519600?text=Hello%20Milkipie!%20I%20would%20like%20to%20place%20an%20order."
-  class="whatsapp-button"
-  target="_blank"
-  aria-label="Order via WhatsApp"
-  rel="noopener noreferrer"
->
-  &#x1F4AC;
-</a>
+  <section id="testimonials" class="section">
+    <h2 style="text-align:center; margin-bottom:2rem; color:#007acc;">What Our Customers Say</h2>
+    <div class="products">
+      <div class="testimonial">
+        <p>“Milkipie milk is so fresh and tasty! My kids love it and I trust its purity.”</p><br/>
+        <strong>- Ayesha Siddique, Basabo</strong>
+      </div>
+      <div class="testimonial">
+        <p>“Their morning delivery is always on time. No more milk worries for us!”</p><br/>
+        <strong>- Mahmudul Hasan, Mugda</strong>
+      </div>
+    </div>
+  </section>
 
+  <section id="contact" class="cta">
+    <h2>Have a Question? Contact Us</h2>
+    <p>Email: milkipie.info@gmail.com | Phone: +8801775519600</p>
+    <a href="https://wa.me/8801775519600?text=Hi%20Milkipie!%20I%20want%20to%20order%20milk." target="_blank">Order on WhatsApp</a>
+  </section>
+
+  <a class="whatsapp-button" href="https://wa.me/8801775519600" target="_blank">&#x1F4AC;</a>
+
+  <footer>
+    &copy; 2025 Milkipie. Built with ❤️ for freshness.
+  </footer>
 </body>
 </html>
